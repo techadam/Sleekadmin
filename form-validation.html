@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="" >
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Meta Responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--Custom style.css-->
+    <link rel="stylesheet" href="assets/css/quicksand.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <!--Chartist CSS-->
+    <link rel="stylesheet" href="assets/css/chartist.min.css">
+    <!--Bootstrap Calendar-->
+    <link rel="stylesheet" href="assets/js/calendar/bootstrap_calendar.css">
+    <!--Form validator-->
+    <link rel="stylesheet" href="assets/js/form-validator/theme-default.min.css">
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Sleek Admin</title>
+  </head>
+  <body>
+    
+    <!--Page Wrapper-->
+
+    <div class="container-fluid">
+
+        <!--Header-->
+        <div class="row header shadow-sm">
+            
+            <!--Logo-->
+            <div class="col-sm-3 pl-0 text-center header-logo">
+               <div class="bg-theme mr-3 pt-3 pb-2 mb-0">
+                    <h3 class="logo"><a href="#" class="text-secondary logo"><i class="fa fa-rocket"></i> Sleek<span class="small">admin</span></a></h3>
+               </div>
+            </div>
+            <!--Logo-->
+
+            <!--Header Menu-->
+            <div class="col-sm-9 header-menu pt-2 pb-0">
+                <div class="row">
+                    
+                    <!--Menu Icons-->
+                    <div class="col-sm-4 col-8 pl-0">
+                        <!--Toggle sidebar-->
+                        <span class="menu-icon" onclick="toggle_sidebar()">
+                            <span id="sidebar-toggle-btn"></span>
+                        </span>
+                        <!--Toggle sidebar-->
+                        <!--Notification icon-->
+                        <div class="menu-icon">
+                            <a class="" href="#" onclick="toggle_dropdown(this); return false" role="button" class="dropdown-toggle">
+                                <i class="fa fa-bell"></i>
+                                <span class="badge badge-danger">5</span>
+                            </a>
+                            <div class="dropdown dropdown-left bg-white shadow border">
+                                <a class="dropdown-item" href="#"><strong>Notifications</strong></a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <div class="align-self-center mr-3 rounded-circle notify-icon bg-primary">
+                                            <i class="fa fa-bookmark"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Meeting</strong></h6>
+                                            <p>You have a meeting by 8:00</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <div class="align-self-center mr-3 rounded-circle notify-icon bg-secondary">
+                                            <i class="fa fa-link"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Events</strong></h6>
+                                            <p>Launching new programme</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <div class="align-self-center mr-3 rounded-circle notify-icon bg-warning">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Personnel</strong></h6>
+                                            <p>New employee arrival</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center link-all" href="#">See all notifications ></a>
+                            </div>
+                        </div>
+                        <!--Notication icon-->
+
+                        <!--Inbox icon-->
+                        <span class="menu-icon inbox">
+                            <a class="" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-envelope"></i>
+                                <span class="badge badge-danger">4</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left mt-10 animated zoomInDown" aria-labelledby="dropdownMenuLink3">
+                                <a class="dropdown-item" href="#"><strong>Unread messages</strong></a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <img class="align-self-center mr-3 rounded-circle" src="assets/img/profile.jpg" width="50px" height="50px" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Adam Abdulrahman</strong></h6>
+                                            <p>How are you?</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <img class="align-self-center mr-3 rounded-circle" src="assets/img/profile.jpg" width="50px" height="50px" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Adam Abdulrahman</strong></h6>
+                                            <p>How are you?</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <div class="media">
+                                        <img class="align-self-center mr-3 rounded-circle" src="assets/img/profile.jpg" width="50px" height="50px" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><strong>Adam Abdulrahman</strong></h6>
+                                            <p>How are you?</p>
+                                            <small class="text-success">09:23am</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center link-all" href="#">View all messages</a>
+                            </div>
+                        </span>
+                        <!--Inbox icon-->
+                        <span class="menu-icon">
+                            <i class="fa fa-th-large"></i>
+                        </span>
+                    </div>
+                    <!--Menu Icons-->
+
+                    <!--Search box and avatar-->
+                    <div class="col-sm-8 col-4 text-right flex-header-menu justify-content-end">
+                        <div class="search-rounded mr-3">
+                            <input type="text" class="form-control search-box" placeholder="Enter keywords.." />
+                        </div>
+                        <div class="mr-4">
+                            <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/img/profile.jpg" alt="Adam" class="rounded-circle" width="40px" height="40px">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#"><i class="fa fa-user pr-2"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-th-list pr-2"></i> Tasks</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-book pr-2"></i> Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-power-off pr-2"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Search box and avatar-->
+                </div>    
+            </div>
+            <!--Header Menu-->
+        </div>
+        <!--Header-->
+
+        <!--Main Content-->
+
+        <div class="row main-content">
+            <!--Sidebar left-->
+            <div class="col-sm-3 col-xs-6 sidebar pl-0">
+                <div class="inner-sidebar mr-3">
+                    <!--Image Avatar-->
+                    <div class="avatar text-center">
+                        <img src="assets/img/client-img4.png" alt="" class="rounded-circle" />
+                        <p><strong>Jonathan Clarke</strong></p>
+                        <span class="text-primary small"><strong>UI/UX Designer</strong></span>
+                    </div>
+                    <!--Image Avatar-->
+
+                    <!--Sidebar Navigation Menu-->
+                    <div class="sidebar-menu-container">
+                        <ul class="sidebar-menu mt-4 mb-4">
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('dashboard'); return false" class=""><i class="fa fa-dashboard mr-3"> </i>
+                                    <span class="none">Dashboard <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="dashboard">
+                                    <li class="child"><a href="index.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Default</a></li>
+                                    <li class="child"><a href="index2.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Analytics</a></li>
+                                    <li class="child"><a href="index3.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Ecommerce</a></li>
+                                    <li class="child"><a href="index4.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Cryptocurrency</a></li>
+                                </ul>
+                            </li>
+                            </li>
+                            <li class="parent">
+                                <a href="widgets.html" class=""><i class="fa fa-puzzle-piece mr-3"></i>
+                                    <span class="none">Widget </span>
+                                </a>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('ul_element'); return false" class=""><i class="fa fa-puzzle-piece mr-3"></i>
+                                    <span class="none">UI Elements <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="ul_element">
+                                    <li class="child"><a href="accordion.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Accordions</a></li>
+                                    <li class="child"><a href="buttons.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Buttons</a></li>
+                                    <li class="child"><a href="badges.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Badges</a></li>
+                                    <li class="child"><a href="breadcrumb.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Breadcrumbs</a></li>
+                                    <li class="child"><a href="cards.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Cards</a></li>
+                                    <li class="child"><a href="icons.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Icons</a></li>
+                                    <li class="child"><a href="modal.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Modals</a></li>
+                                    <li class="child"><a href="notification.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Notification</a></li>
+                                    <li class="child"><a href="progressbar.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Progressbar</a></li>
+                                    <li class="child"><a href="sweetalert.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Sweet alert</a></li>
+                                    <li class="child"><a href="tabs.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Tabs</a></li>
+                                    <li class="child"><a href="tooltip-popover.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Tooltip and Popovers</a></li>
+                                    <li class="child"><a href="typography.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Typography</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('form_element'); return false" class=""><i class="fa fa-pencil-square mr-3"></i>
+                                    <span class="none">Form Elements <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="form_element">
+                                    <li class="child"><a href="form-general.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Basic Elements</a></li>
+                                    <li class="child"><a href="form-advanced.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Advanced Elements</a></li>
+                                    <li class="child"><a href="form-validation.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Validation</a></li>
+                                    <li class="child"><a href="form-wizard.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Form Wizard</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('editors'); return false" class=""><i class="fa fa-pencil-square-o mr-3"></i>
+                                    <span class="none">Text Editors <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="editors">
+                                    <li class="child"><a href="ckeditor-classic.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Ckeditor classic</a></li>
+                                    <li class="child"><a href="ckeditor-inline.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Ckeditor inline</a></li>
+                                    <li class="child"><a href="ckeditor-document.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Ckeditor document</a></li>
+                                    <li class="child"><a href="summernote.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Summernote editor</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('tables'); return false" class=""><i class="fa fa-pencil-square mr-3"></i>
+                                    <span class="none">Tables <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="tables">
+                                    <li class="child"><a href="basic-tables.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Basic Tables</a></li>
+                                    <li class="child"><a href="datatable.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Datatables</a></li>
+                                    <li class="child"><a href="jsgrid-table.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> JSGrid Tables</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('charts'); return false" class=""><i class="fa fa-pie-chart mr-3"></i>
+                                    <span class="none">Charts <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="charts">
+                                    <li class="child"><a href="chart.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Chart JS</a></li>
+                                    <li class="child"><a href="chartist.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Chartist JS</a></li>
+                                    <li class="child"><a href="echarts.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Echarts JS</a></li>
+                                    <li class="child"><a href="flot.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Flot JS</a></li>
+                                    <li class="child"><a href="morris.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Morris JS</a></li>
+                                    <li class="child"><a href="nvd3.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> NVD3 JS</a></li>
+                                    <li class="child"><a href="sparkline.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Sparkline JS</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="icons.html" class=""><i class="fa fa-toggle-on mr-3"></i>
+                                    <span class="none">Icons</span>
+                                </a>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('ecommerce'); return false" class=""><i class="fa fa-shopping-cart mr-3"></i>
+                                    <span class="none">Ecommerce <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="ecommerce">
+                                    <li class="child"><a href="products.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> ProductList</a></li>
+                                    <li class="child"><a href="product-detail.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> ProductDetail</a></li>
+                                    <li class="child"><a href="orders.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> OrderList</a></li>
+                                    <li class="child"><a href="invoice.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Invoice</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('maps'); return false" class=""><i class="fa fa-map mr-3"></i>
+                                    <span class="none">Maps <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="maps">
+                                    <li class="child"><a href="jvector-maps.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Jvector Maps</a></li>
+                                    <li class="child"><a href="google-maps.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Google Maps</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="#" onclick="toggle_menu('pages'); return false" class=""><i class="fa fa-file mr-3"></i>
+                                    <span class="none">Pages <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                </a>
+                                <ul class="children" id="pages">
+                                    <li class="child"><a href="email-inbox.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Email-Inbox</a></li>
+                                    <li class="child"><a href="email.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Email-Compose</a></li>
+                                    <li class="child"><a href="login.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Login</a></li>
+                                    <li class="child"><a href="register.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Signup</a></li>
+                                    <li class="child"><a href="lockscreen.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Lock Screen</a></li>
+                                    <li class="child"><a href="forgot-password.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Forgot Password</a></li>
+                                    <li class="child"><a href="profile.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Profile</a></li>
+                                    <li class="child"><a href="gallery.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Gallery</a></li>
+                                    <li class="child"><a href="invoice.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Invoice</a></li>
+                                    <li class="child"><a href="search-result.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Search</a></li>
+                                    <li class="child"><a href="pricing.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Pricing</a></li>
+                                    <li class="child"><a href="blank.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Blank Page</a></li>
+                                    <li class="child"><a href="error-404.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Error 404</a></li>
+                                    <li class="child"><a href="error-500.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Error 500</a></li>
+                                    <li class="child"><a href="error-504.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Error 504</a></li>
+                                </ul>
+                            </li>
+                            <li class="parent">
+                                <a href="fullcalendar.html" class=""><i class="fa fa-calendar-o mr-3"> </i>
+                                    <span class="none">Full Calendar </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Sidebar Naigation Menu-->
+                </div>
+            </div>
+            <!--Sidebar left-->
+
+            <!--Content right-->
+            <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
+                <h5 class="mb-0" ><strong>Form validation</strong></h5>
+                <span class="text-secondary">Dashboard <i class="fa fa-angle-right"></i> form validation</span>
+                
+                <div class="row mt-3">
+                    <div class="col-sm-12">
+                        <!--Validation types using Form-validator.js-->
+                        <div class="mt-1 mb-4 p-3 button-container bg-white border shadow-sm">
+                            <h6 class="mb-2">Validation types with form-validator.js</h6>
+                            <p class="mb-2">Enables you to perform complex validation such as <code>required, email, max-length</code> and many others</p>
+
+                            <form action="" id="validation_style" class="mt-3">
+                                <div class="form-group row">
+                                    <label for="Required1" class="col-sm-3">Required</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="Required1" class="form-control" data-validation="required" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Email1" class="col-sm-3">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" id="Email1" class="form-control" data-validation="email" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Number1" class="col-sm-3">Number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="Number1" class="form-control" data-validation="number" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="URL1" class="col-sm-3">URL</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="URL1" class="form-control" data-validation="url" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Regxp1" class="col-sm-3">Only lowercase letters a-z (regexp)</label>
+                                    <div class="col-sm-9">
+                                        <input name="..." class="form-control" id="Regxp1" data-validation="custom" data-validation-regexp="^([a-z]+)$">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Min1" class="col-sm-3">Minimum 5 chars</label>
+                                    <div class="col-sm-9">
+                                        <input name="..." class="form-control" id="Min1" data-validation="length" data-validation-length="min5">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Max1" class="col-sm-3">Maximum 5 chars</label>
+                                    <div class="col-sm-9">
+                                        <input name="..." class="form-control" id="Max1" data-validation="length" data-validation-length="max5">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Rlength1" class="col-sm-3 mt-3">Restricted length</label>
+                                    <div class="col-sm-9">
+                                        <span id="max-length-element">100</span> chars left
+                                        <textarea id="Rlength1" class="form-control" name="text"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Verify data</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <!--/Validation types using Form-validator.js-->
+                        
+                        <!--Default bootstrap 4 validation-->
+                        <div class="mt-1 mb-4 p-3 button-container bg-white border shadow-sm">
+                            <h6 class="mb-2">Bootstrap 4 validation</h6>
+                            <p>Enables you to perform basic validation such as <code>required</code> fields</p>
+
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-2">
+                                        <label for="validationCustom01">First name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-2">
+                                        <label for="validationCustom02">Last name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-2">
+                                        <label for="validationCustomUsername">Username <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-2">
+                                        <label for="validationCustom03">City <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <label for="validationCustom04">State <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <label for="validationCustom05">Zip <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid zip.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6 mb-2">
+                                        <div class="form-group">
+                                            <label for="">Years of experience <span class="text-danger">*</span></label>
+                                            <select class="custom-select" required>
+                                                <option value="">Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <div class="invalid-feedback">Example invalid custom select feedback</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 mb-2 mt-1">
+                                        <label for="">Custom file input <span class="text-danger">*</span></label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-0">
+                                    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                                    <label class="custom-control-label" for="customControlValidation2">Male</label>
+                                </div>
+
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                                    <label class="custom-control-label" for="customControlValidation3">Female</label>
+                                    <div class="invalid-feedback">More example invalid feedback text</div>
+                                </div>
+
+                                <div class="custom-control custom-checkbox mb-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                                    <label class="custom-control-label" for="customControlValidation1">Accept terms and conditions <span class="text-danger">*</span></label>
+                                    <div class="invalid-feedback">Example invalid feedback text</div>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>                            
+                        </div>
+                        <!--/Default bootstrap validation-->
+
+                        <!--Validation with tooltips-->
+                        <div class="mt-1 mb-3 p-3 button-container bg-white border shadow-sm">
+                            <h6 class="mb-3">Bootstrap 4 validation with tooltips</h6>
+
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationTooltip01">First name</label>
+                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                        <div class="valid-tooltip">
+                                            Looks good!
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationTooltip02">Last name</label>
+                                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                                        <div class="valid-tooltip">
+                                            Looks good!
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationTooltipUsername">Username</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                                            <div class="invalid-tooltip">
+                                            Please choose a unique and valid username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationTooltip03">City</label>
+                                        <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                                        <div class="invalid-tooltip">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationTooltip04">State</label>
+                                        <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                                        <div class="invalid-tooltip">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationTooltip05">Zip</label>
+                                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                                        <div class="invalid-tooltip">
+                                            Please provide a valid zip.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>
+                        </div>
+                        <!--/Validation with tooltips
+                        
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="row mt-5 mb-4 footer">
+                    <div class="col-sm-8">
+                        <span>&copy; All rights reserved 2019 designed by <a class="text-info" href="#">A-Fusion</a></span>
+                    </div>
+                    <div class="col-sm-4 text-right">
+                        <a href="#" class="ml-2">Contact Us</a>
+                        <a href="#" class="ml-2">Support</a>
+                    </div>
+                </div>
+                <!--Footer-->
+
+            </div>
+        </div>
+
+        <!--Main Content-->
+
+    </div>
+
+    <!--Page Wrapper-->
+
+    <!-- Page JavaScript Files-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <!--Popper JS-->
+    <script src="assets/js/popper.min.js"></script>
+    <!--Bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--Sweet alert JS-->
+    <script src="assets/js/sweetalert.js"></script>
+    <!--Progressbar JS-->
+    <script src="assets/js/progressbar.min.js"></script>
+    <!--Charts-->
+    <!--Canvas JS-->
+    <script src="assets/js/charts/canvas.min.js"></script>
+    <!--Bootstrap Calendar JS-->
+    <script src="assets/js/calendar/bootstrap_calendar.js"></script>
+    <script src="assets/js/calendar/demo.js"></script>
+    <!--Bootstrap Calendar-->
+    <!--Form validator-->
+    <script src="assets/js/form-validator/jquery.form-validator.min.js"></script>
+
+    <!--Custom Js Script-->
+    <script src="assets/js/custom.js"></script>
+    <!--Custom Js Script-->
+
+    <script>
+        $.validate({
+            form : '#validation_style',
+            modules : 'security'
+        });
+        $('#Rlength1').restrictLength( $('#max-length-element') );
+    </script>
+  </body>
+</html>
