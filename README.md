@@ -3,7 +3,7 @@ Free admin dashboard template
 
 # Preview
 
-[Sleekadmin dashboard template preview] (https://techadam.github.io/portfolio/img-9.png)
+![Sleekadmin dashboard template preview](https://techadam.github.io/portfolio/img-9.png)
 
 # Overview
 Sleekadmin is a full-featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.
