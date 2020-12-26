@@ -1,5 +1,5 @@
 # Sleekadmin Bootstrap 4 Template
-Free admin dashboard template
+Bootstrap 4, CSS 3, HTML 5, Material Design Admin dashboard template
 
 # Preview
 
