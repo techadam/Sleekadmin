@@ -1,6 +1,7 @@
 # Sleekadmin Bootstrap 4 Template
 Bootstrap 4, CSS 3, HTML 5, Material Design Admin dashboard template
-[View live demo](http://sleekadmin.surge.sh/Sleek/index.html)
+
+- [View live demo](http://sleekadmin.surge.sh/Sleek/index.html)
 
 # Preview
 
